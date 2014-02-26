@@ -186,19 +186,19 @@ namespace spades {
 		public:
 			RifleWeapon3(World*w,Player*p):Weapon(w,p){}
 			virtual std::string GetName() { return "Rifle"; }
-			virtual float GetDelay() { return 0.5f; }
-			virtual int GetClipSize() { return 10; }
-			virtual int GetMaxStock() { return 50; }
+			virtual float GetDelay() { return 0.1f; }
+			virtual int GetClipSize() { return 50; }
+			virtual int GetMaxStock() { return 100; }
 			virtual float GetReloadTime() { return 2.5f; }
 			virtual bool IsReloadSlow() { return false; }
 			virtual WeaponType GetWeaponType() { return RIFLE_WEAPON; }
 			virtual int GetDamage(HitType type, float distance) {
 				switch(type){
-					case HitTypeTorso: return 49;
+					case HitTypeTorso: return 100;
 					case HitTypeHead: return 100;
-					case HitTypeArms: return 33;
-					case HitTypeLegs: return 33;
-					case HitTypeBlock: return 50;
+					case HitTypeArms: return 100;
+					case HitTypeLegs: return 100;
+					case HitTypeBlock: return 100;
 					default: SPAssert(false); return 0;
 				}
 			}
@@ -214,18 +214,18 @@ namespace spades {
 			SMGWeapon3(World*w,Player*p):Weapon(w,p){}
 			virtual std::string GetName() { return "SMG"; }
 			virtual float GetDelay() { return 0.1f; }
-			virtual int GetClipSize() { return 30; }
-			virtual int GetMaxStock() { return 120; }
+			virtual int GetClipSize() { return 40; }
+			virtual int GetMaxStock() { return 400; }
 			virtual float GetReloadTime() { return 2.5f; }
 			virtual bool IsReloadSlow() { return false; }
 			virtual WeaponType GetWeaponType() { return SMG_WEAPON; }
 			virtual int GetDamage(HitType type, float distance) {
 				switch(type){
-					case HitTypeTorso: return 29;
-					case HitTypeHead: return 75;
-					case HitTypeArms: return 18;
-					case HitTypeLegs: return 18;
-					case HitTypeBlock: return 25;
+					case HitTypeTorso: return 100;
+					case HitTypeHead: return 100;
+					case HitTypeArms: return 100;
+					case HitTypeLegs: return 100;
+					case HitTypeBlock: return 100;
 					default: SPAssert(false); return 0;
 				}
 			}
